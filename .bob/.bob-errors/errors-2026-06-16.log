@@ -1,0 +1,105 @@
+
+================================================================================
+ERROR LOGGED: 2026-06-16T20:34:15.252Z
+================================================================================
+Error Name: Error
+Error Message: Connection failed for 'figma': fetch failed
+
+Stack Trace:
+Error: Connection failed for 'figma': fetch failed
+    at $lr (file:///opt/homebrew/lib/node_modules/bobshell/bundle/bob.js:3480:10291)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async zwe.connect (file:///opt/homebrew/lib/node_modules/bobshell/bundle/bob.js:3480:13137)
+    at async file:///opt/homebrew/lib/node_modules/bobshell/bundle/bob.js:3480:17293
+================================================================================
+
+
+================================================================================
+ERROR LOGGED: 2026-06-16T20:34:15.339Z
+================================================================================
+Error Name: Error
+Error Message: Cannot connect to 'product-knowledge' - server may be down or URL incorrect
+
+Stack Trace:
+Error: Cannot connect to 'product-knowledge' - server may be down or URL incorrect
+    at $lr (file:///opt/homebrew/lib/node_modules/bobshell/bundle/bob.js:3480:10291)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async zwe.connect (file:///opt/homebrew/lib/node_modules/bobshell/bundle/bob.js:3480:13137)
+    at async file:///opt/homebrew/lib/node_modules/bobshell/bundle/bob.js:3480:17293
+================================================================================
+
+
+================================================================================
+ERROR LOGGED: 2026-06-16T20:34:15.566Z
+================================================================================
+Error Name: Error
+Error Message: Connection failed for 'carbon': Streamable HTTP error: Error POSTing to endpoint: {"error":"Invalid token","detail":"\"exp\" claim timestamp check failed | Re-auth required: re-run the authorization flow to obtain a new auth code and session ID, then retry with the new Bearer token and X-MCP-Session."}
+
+Stack Trace:
+Error: Connection failed for 'carbon': Streamable HTTP error: Error POSTing to endpoint: {"error":"Invalid token","detail":"\"exp\" claim timestamp check failed | Re-auth required: re-run the authorization flow to obtain a new auth code and session ID, then retry with the new Bearer token and X-MCP-Session."}
+    at $lr (file:///opt/homebrew/lib/node_modules/bobshell/bundle/bob.js:3480:10291)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async zwe.connect (file:///opt/homebrew/lib/node_modules/bobshell/bundle/bob.js:3480:13137)
+    at async file:///opt/homebrew/lib/node_modules/bobshell/bundle/bob.js:3480:17293
+================================================================================
+
+
+================================================================================
+ERROR LOGGED: 2026-06-16T20:34:17.225Z
+User ID: joe.pearson@us.ibm.com
+================================================================================
+Error Name: Error
+Error Message: Connection failed for 'time': MCP error -32000: Connection closed
+
+Stack Trace:
+Error: Connection failed for 'time': MCP error -32000: Connection closed
+    at $lr (file:///opt/homebrew/lib/node_modules/bobshell/bundle/bob.js:3480:10291)
+    at async zwe.connect (file:///opt/homebrew/lib/node_modules/bobshell/bundle/bob.js:3480:13137)
+    at async file:///opt/homebrew/lib/node_modules/bobshell/bundle/bob.js:3480:17293
+================================================================================
+
+
+================================================================================
+ERROR LOGGED: 2026-06-16T20:47:41.255Z
+================================================================================
+Error Name: Error
+Error Message: Cannot connect to 'product-knowledge' - server may be down or URL incorrect
+
+Stack Trace:
+Error: Cannot connect to 'product-knowledge' - server may be down or URL incorrect
+    at $lr (file:///opt/homebrew/lib/node_modules/bobshell/bundle/bob.js:3480:10291)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async zwe.connect (file:///opt/homebrew/lib/node_modules/bobshell/bundle/bob.js:3480:13137)
+    at async file:///opt/homebrew/lib/node_modules/bobshell/bundle/bob.js:3480:17293
+================================================================================
+
+
+================================================================================
+ERROR LOGGED: 2026-06-16T20:47:41.271Z
+================================================================================
+Error Name: Error
+Error Message: Connection failed for 'figma': fetch failed
+
+Stack Trace:
+Error: Connection failed for 'figma': fetch failed
+    at $lr (file:///opt/homebrew/lib/node_modules/bobshell/bundle/bob.js:3480:10291)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async zwe.connect (file:///opt/homebrew/lib/node_modules/bobshell/bundle/bob.js:3480:13137)
+    at async file:///opt/homebrew/lib/node_modules/bobshell/bundle/bob.js:3480:17293
+================================================================================
+
+
+================================================================================
+ERROR LOGGED: 2026-06-16T20:47:41.521Z
+================================================================================
+Error Name: Error
+Error Message: Connection failed for 'carbon': Streamable HTTP error: Error POSTing to endpoint: {"error":"Invalid token","detail":"\"exp\" claim timestamp check failed | Re-auth required: re-run the authorization flow to obtain a new auth code and session ID, then retry with the new Bearer token and X-MCP-Session."}
+
+Stack Trace:
+Error: Connection failed for 'carbon': Streamable HTTP error: Error POSTing to endpoint: {"error":"Invalid token","detail":"\"exp\" claim timestamp check failed | Re-auth required: re-run the authorization flow to obtain a new auth code and session ID, then retry with the new Bearer token and X-MCP-Session."}
+    at $lr (file:///opt/homebrew/lib/node_modules/bobshell/bundle/bob.js:3480:10291)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async zwe.connect (file:///opt/homebrew/lib/node_modules/bobshell/bundle/bob.js:3480:13137)
+    at async file:///opt/homebrew/lib/node_modules/bobshell/bundle/bob.js:3480:17293
+================================================================================
+
