@@ -35,11 +35,15 @@ This will give you the ability to create an obsidian-vault for managing memories
 
 ## Initialize the repository
 
+Ask your AI-assisted editor to initialize the repository.  If that's too ambiguous, reference the `@init-repo.md` workflow file and instruct the tool to read the contents and follow the guidance.
+
 ### LICENSE.md
 
 ### .gitignore
 
 ### README.md
+
+Use the `init-readme` skill to create a new README.md with standard Open Horizon sections (shields, prerequisites, installation, usage, debugging, Makefile targets), or to audit an existing one and recommend missing sections.
 
 ### MAINTAINERS.md
 

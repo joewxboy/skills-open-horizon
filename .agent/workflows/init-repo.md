@@ -47,48 +47,17 @@ This workflow sets up a complete repository foundation including:
 
 3. **Create or update README.md**
 
-   **If README.md is missing:**
-   - Create basic README structure:
-     ```markdown
-     # Project Name
-     
-     Brief description of what this project does.
-     
-     ## Features
-     
-     - Feature 1
-     - Feature 2
-     
-     ## Installation
-     
-     ```bash
-     # Installation instructions
-     ```
-     
-     ## Usage
-     
-     ```bash
-     # Usage examples
-     ```
-     
-     ## License
-     
-     This project is licensed under the [LICENSE_TYPE] - see the [LICENSE.md](LICENSE.md) file for details.
-     
-     ## Contributing
-     
-     Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for details.
-     ```
+   Use the **Skill tool** to invoke `init-readme`:
+   ```
+   Invoke init-readme skill to set up README.md
+   ```
 
-   **If README.md exists but is minimal:**
-   - Ask user if they want to enhance it with standard sections
-   - Add missing sections (Installation, Usage, License, Contributing)
+   This will:
+   - Check whether a `README.md` already exists at the repository root
+   - If missing: detect the service name, GitHub repo path, and architectures; confirm with the user; then generate a full Open Horizon–style README with shields, prerequisites, installation, usage, debugging, and a complete Makefile targets table
+   - If present: audit the existing README against the standard section checklist (shields, prerequisites, installation, usage, `### All Makefile targets`, etc.) and present targeted recommendations for any missing or incomplete sections
 
-   **Customization:**
-   - Ask user for project name and description
-   - Detect project type (Python, Node.js, Go, etc.) from files, using **Skill tool** to invoke `init-gitignore` to detect and categorize
-   - Add language-specific installation/usage examples
-   - Link to LICENSE.md with correct license type
+   **Skip if:** README.md already exists and the user declines all recommendations during the skill's audit step
 
 4. **Create .gitignore**
 
@@ -123,7 +92,23 @@ This workflow sets up a complete repository foundation including:
 
   **Skip if:** MAINTAINERS.md already exists and user declines to replace or append during the skill's confirmation step
 
-6. **Create CONTRIBUTING.md (optional)**
+6. **Create Makefile**
+
+  Use the **Skill tool** to invoke `init-makefile`:
+  ```
+  Invoke init-makefile skill to set up Makefile
+  ```
+
+  This will:
+  - Check whether a `Makefile` already exists at the repository root
+  - Detect the service/container name from `service.definition.json` or the repository directory name
+  - Confirm the detected name and any service-specific values (DockerHub ID, port, volume path) with the user
+  - Write a `Makefile` skeleton using the Open Horizon third-party-image pattern (no build/push step)
+  - Replace all template placeholder references with the actual service name
+
+  **Skip if:** Makefile already exists and user declines to replace it during the skill's confirmation step
+
+7. **Create CONTRIBUTING.md (optional)**
 
    Ask user: "Would you like to add a CONTRIBUTING.md file?"
 
@@ -169,7 +154,7 @@ This workflow sets up a complete repository foundation including:
 
    - Reference the project contributing document as needed: https://raw.githubusercontent.com/open-horizon/.github/refs/heads/master/CONTRIBUTING.md
 
-7. **Create CODE_OF_CONDUCT.md (optional)**
+8. **Create CODE_OF_CONDUCT.md (optional)**
 
    Ask user: "Would you like to add a Code of Conduct?"
 
@@ -182,7 +167,7 @@ This workflow sets up a complete repository foundation including:
    - Format as Markdown
    - Customize contact information section
 
-8. **Display summary**
+9. **Display summary**
 
    Show what was created/updated:
    - List of files created
@@ -201,6 +186,7 @@ This workflow sets up a complete repository foundation including:
 ✓ README.md (with project structure)
 ✓ .gitignore (Python template)
 ✓ MAINTAINERS.md (2 active maintainers)
+✓ Makefile (myservice, third-party image)
 ✓ CONTRIBUTING.md
 ✓ CODE_OF_CONDUCT.md (Contributor Covenant v2.1)
 
@@ -282,6 +268,12 @@ This workflow delegates specialist tasks to dedicated skills rather than duplica
 - Customises with copyright information
 - Saves as LICENSE.md
 
+**`init-readme`** — handles `README.md` creation and auditing:
+- Checks whether a `README.md` already exists at the repository root
+- New file: detects service name, GitHub repo path, and architectures; confirms with the user; writes a full Open Horizon–style README with shields, prerequisites, installation, usage, debugging, and a complete Makefile targets table
+- Existing file: audits the README against the standard section checklist and recommends additions or modifications for any missing or incomplete sections, with special emphasis on the `### All Makefile targets` section
+- Never overwrites without explicit user confirmation
+
 **`init-gitignore`** — handles `.gitignore` creation and updates:
 - Detects languages and frameworks from the codebase
 - Composes tailored entries from the `gitignore-snippets` skill
@@ -294,5 +286,12 @@ This workflow delegates specialist tasks to dedicated skills rather than duplica
 - Optionally collects emeritus maintainer entries
 - Writes the file in the canonical Open Horizon table format
 - Requires at least one active maintainer before writing
+
+**`init-makefile`** — handles `Makefile` creation:
+- Checks for an existing `Makefile` and offers replace/skip/cancel
+- Detects the service/container name from `service.definition.json` or the repository directory name
+- Confirms service-specific values (DockerHub ID, port mapping, volume path) with the user
+- Writes the Open Horizon third-party-image skeleton with `build` and `push` stubs
+- Substitutes the real service name for all template placeholders
 
 The workflow focuses on orchestrating the full initialisation sequence; each skill owns its own file logic.
