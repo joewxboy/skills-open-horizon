@@ -1,6 +1,16 @@
 # skills-open-horizon
 SKILLS.md file for AI-assisted management of nodes
 
+## Install skills into your project
+
+Run this one-liner from the root of your target repository to download and execute the installer script. It clones this repository into a temporary directory, copies the `.agent` folder into your project, then removes the temporary directory.
+
+```bash
+bash <(curl -fsSL https://raw.githubusercontent.com/open-horizon-services/skills-open-horizon/main/install-skills.sh)
+```
+
+> **Tip:** The script creates `.agent/` in your current working directory, so run it from your repository root.
+
 ## Pre-requisites
 
 ### Install [Open Spec](https://openspec.dev/)
