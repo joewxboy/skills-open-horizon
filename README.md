@@ -57,11 +57,11 @@ Ask your ML-assisted IDE to `init gitignore`.  It will scan the codebase and pro
 
 ### README.md
 
-Use the `init-readme` skill to create a new README.md with standard Open Horizon sections (shields, prerequisites, installation, usage, debugging, Makefile targets), or to audit an existing one and recommend missing sections.
+Ask your ML-assisted IDE to `init readme` to create a new README.md with standard Open Horizon sections (shields, prerequisites, installation, usage, debugging, Makefile targets), or to audit an existing one and recommend missing sections.
 
 ### MAINTAINERS.md
 
-Ask your ML-assisted IDE to `init maintainers`.  It will extract your name, github ID, and email address from git defaults and populate the structure.  It will give you the option of adding more maintainers, and adding an emeritus section.  
+Ask your ML-assisted IDE to `init maintainers`.  It will extract your name, github ID, and email addressbegin. from git defaults and populate the structure.  It will give you the option of adding more maintainers, and adding an emeritus section.  
 
 ### Makefile stub
 
@@ -69,3 +69,26 @@ Ask your ML-assisted IDE to `init makefile`. It will stub out the makefile based
 
 ### Optionals
 
+When you're ready to begin working on the code, start in a terminal at the root directory of your repository and initialize the project plan with the editor of your choice.  For example, if you're using `bob`, then type:
+
+```bash
+openspec init --tools bob
+```
+
+Then start your editor:
+
+```bash
+bob
+```
+
+And then describe the work you'd like to begin as an Open Spec proposal using the `/opsx-propose` slash command.  This could be text straight from an issue, or a short feature description.  If needed, paste the URL of the github issue or description.  For example:
+
+```bash
+/opsx-propose “Work on adding the optional section to the documentation described in the GitHub issue https://github.com/open-horizon-services/skills-open-horizon/issues/5”
+```
+
+Review what was created.  When you're satisfied with the results, begin development with the Open Spec apply slash command:
+
+```bash
+/opsx-apply
+```
