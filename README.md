@@ -61,7 +61,7 @@ Ask your ML-assisted IDE to `init readme` to create a new README.md with standar
 
 ### MAINTAINERS.md
 
-Ask your ML-assisted IDE to `init maintainers`.  It will extract your name, github ID, and email addressbegin. from git defaults and populate the structure.  It will give you the option of adding more maintainers, and adding an emeritus section.  
+Ask your ML-assisted IDE to `init maintainers`.  It will extract your name, github ID, and email address from git defaults and populate the structure.  It will give you the option of adding more maintainers, and adding an emeritus section.  
 
 ### Makefile stub
 
